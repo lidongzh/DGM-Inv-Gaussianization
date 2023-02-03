@@ -4,9 +4,9 @@ This repository contains the implementation for
 
 [**Differentiable Gaussianization Layers for Inverse Problems Regularized by Deep Generative Models**](https://openreview.net/forum?id=OXP9Ns0gnIq) [**ICLR 2023**].
 
-<!-- Abstract: *Deep generative models such as GANs, normalizing flows, and diffusion models are powerful regularizers for inverse problems. They exhibit great potential for helping reduce ill-posedness and attain high-quality results. However, the latent tensors of such deep generative models can fall out of the desired high-dimensional standard Gaussian distribution during an inversion process, particularly in the presence of data noise and inaccurate forward models. In such cases, deep generative models are ineffective in attaining high-fidelity solutions. To address this issue, we propose to reparameterize and Gaussianize the latent tensors using novel differentiable data-dependent layers wherein custom operators are defined by solving optimization problems. These proposed layers constrain inverse problems to obtain high-fidelity in-distribution solutions. We tested and validated our technique on three inversion tasks: compressive-sensing MRI, image deblurring, and eikonal tomography (a nonlinear PDE-constrained inverse problem), using two representative deep generative models: StyleGAN2 and Glow, and achieved state-of-the-art performance in terms of accuracy and consistency.* -->
+## Abstract
+> Deep generative models such as GANs, normalizing flows, and diffusion models are powerful regularizers for inverse problems. They exhibit great potential for helping reduce ill-posedness and attain high-quality results. However, the latent tensors of such deep generative models can fall out of the desired high-dimensional standard Gaussian distribution during an inversion process, particularly in the presence of data noise and inaccurate forward models. In such cases, deep generative models are ineffective in attaining high-fidelity solutions. To address this issue, we propose to reparameterize and Gaussianize the latent tensors using novel differentiable data-dependent layers wherein custom operators are defined by solving optimization problems. These proposed layers constrain inverse problems to obtain high-fidelity in-distribution solutions. We tested and validated our technique on three inversion tasks: compressive-sensing MRI, image deblurring, and eikonal tomography (a nonlinear PDE-constrained inverse problem), using two representative deep generative models: StyleGAN2 and Glow, and achieved state-of-the-art performance in terms of accuracy and consistency.
 
-<br/>
 
 ## Usage
 ### Step 1:
@@ -45,7 +45,6 @@ Go into `tasks/stylegan2/inversion/`. Generate ground-truth images by runing
 ```bash
 python generate_mri_examples.py
 ```
-
 
 ### Step 4:
 Run the following command to perform compressive sensing MRI inversion
@@ -128,7 +127,6 @@ python ./main_tomo_sg2.py                 \
 ### Comments
 We loop through `style_seed=noise_seed=0,1,2` for each of the 100 or 25 images (see [More Details](More_details.md)), and report the best image / calculate metrics using the best score among the three runs. The [More Details](More_details.md) file also contains the images indices for the inversion examples shown in the paper.
 
-<br/>
 
 ## Training of Glow
 Go into `tasks/glow/training`. Run
@@ -141,9 +139,6 @@ As mentioned by the author of the trainer, the training code uses ImageFolder fr
 > ...
 
 One can simply put images in one class. For more details of training and how to prepare the CelebA-HQ dataset, please refer to Appendix F of the paper.
-
-
-<br/>
 
 
 ## Code structure
@@ -206,12 +201,10 @@ tasks # scripts for inversion tasks
      └── stable_diffusion_exp.py # script to generate the motivating examples for Stable Diffusion
 ```
 
-<br/>
 
 ## License
 This code is being shared under the [MIT license](LICENSE).
 
-<br/>
 
 ## Citation
 ```
