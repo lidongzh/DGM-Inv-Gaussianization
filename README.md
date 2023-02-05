@@ -21,7 +21,6 @@ This repository contains the implementation for
     ```bash
     pip install -r requirements.txt
     ```
-    Note: the original inversion experiments were conducted with PyTorch version 1.9.0.
 
 ### Step 2:
 Download files:
@@ -183,7 +182,7 @@ dgminv # directory of the main source code
 
 stylegan2-ada-pytorch # The official implementation of StyleGAN2-ada: https://github.com/NVlabs/stylegan2-ada-pytorch.git
 
-tasks # scripts for inversion tasks
+tasks # scripts for inversion/training/experiments
 │
 ├── glow
 │    ├── training/train.py # script to train the Glow model
